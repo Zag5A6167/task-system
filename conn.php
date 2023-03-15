@@ -2,8 +2,8 @@
 
 $servername = "localhost";
 $username   = "root";
-$password   = "";
-$dbname     = "db_task";
+$password   = "zz";
+$dbname     = "db_member";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
