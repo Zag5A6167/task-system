@@ -27,10 +27,16 @@
     <form  action="register.php" method="post">
         <label  for="username">ชื่อ</label>
         <input type="text" name="username" required>
-        <label for="data_task">วันที่</label>
-        <input type="date" name="date_task" >
+        <label  for="model_board">รุ่น</label>
+        <input type="text" name="model_board" required>
         <label for="amount">จำนวน</label>
-        <input type="number" name="amount" >
+        <input type="number" name="amount" required>
+        <label for="date_task">วันที่รับ</label>
+        <input type="date" name="date_task">
+        <label for="send_back">เสีย/ไม่ซ่อม</label>
+        <input type="number" name="send_back">
+        <label for="claim_amount">จำนวนเคลม</label>
+        <input type="number" name="claim_amount">
        <input class="button-save" type="submit" value="บันทึก">
     </form>
 

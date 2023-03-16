@@ -10,6 +10,10 @@
     <title>หน้าหลัก</title>
 </head>
 <body>
+   
+
+
+
 
     <header>
      <div class="logo">
@@ -26,11 +30,44 @@
     </header>
 
     <?php
-    
-        
-    
-    
-    
+    require 'conn.php';
+    $query = "SELECT * FROM task";
+    $result = mysqli_query($conn,$query);
     ?>
+
+    <table class="table table-hover container tb">
+        
+        <thead>
+            
+            <tr>
+                
+                <th>id</th>
+                <th>ชื่อ</th>
+                <th>รุ่น</th>
+                <th>จำนวน</th>
+                <th>วัน</th>
+                <th>เสีย/ส่งคืน</th>
+                <th>เคลม</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                foreach($result as $row) { 
+            ?>
+            <tr>
+                <td><?php echo $row['id'];?></td>
+                <td><?php echo $row['username'];?></td>
+                <td><?php echo $row['model_board'];?></td>
+                <td><?php echo $row['amount'];?></td>
+                <td><?php echo $row['date_task'];?></td>
+                <td><?php echo $row['send_back'];?></td>
+                <td><?php echo $row['claim_amount'];?></td>    
+                <td><button class="btn btn-primary">แก้ไข</button></td>   
+                <td><button class="btn btn-danger">ลบ</button></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+    <?php mysqli_close($conn)?>
 </body>
 </html>

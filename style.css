@@ -57,10 +57,10 @@ form{
   display: flex;
   flex-direction: column;
   
-  
+ 
 }
 form input{
-    margin-top: 5px;
+    margin-top: 2px;
     padding: 10px;
     
 }
@@ -77,3 +77,6 @@ form input{
     background-color: rgb(21, 120, 42);
     color: white;
 }
+
+
+
