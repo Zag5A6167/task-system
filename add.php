@@ -28,9 +28,9 @@
         <label  for="username">ชื่อ</label>
         <input type="text" name="username" required>
         <label for="data_task">วันที่</label>
-        <input type="date" name="date_task" required>
+        <input type="date" name="date_task" >
         <label for="amount">จำนวน</label>
-        <input type="number" name="amount" required>
+        <input type="number" name="amount" >
        <input class="button-save" type="submit" value="บันทึก">
     </form>
 
